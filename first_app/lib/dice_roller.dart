@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-class DiceRoller extends StatefulWidget {
-  DiceRoller({super.key});
+final random = Random();
 
-  String activeDiceImage = "assets/images/dice-2.png";
+class DiceRoller extends StatefulWidget {
+  const DiceRoller({super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -13,7 +13,7 @@ class DiceRoller extends StatefulWidget {
 }
 
 class _DiceRollerState extends State<DiceRoller> {
-  String activeDiceImage = "assets/images/dice-1.png";
+  String activeDiceImage = "assets/images/dice-2.png";
 
   void rollDice() {
     List<String> dice = [
@@ -24,11 +24,11 @@ class _DiceRollerState extends State<DiceRoller> {
       "assets/images/dice-5.png",
       "assets/images/dice-6.png",
     ];
-    final random = Random();
     int randomNum = 0 + random.nextInt(dice.length);
 
     setState(() {
       activeDiceImage = dice[randomNum];
+      // activeDiceImage = "assets/images/dice-$randomNum.png";
     });
   }
 
