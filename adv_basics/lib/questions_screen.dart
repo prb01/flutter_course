@@ -43,7 +43,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 32,
             ),
             ...(currentQuestion.getShuffledAnswers()).map(
@@ -52,7 +52,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                   answerQuestion(answer);
                 });
               },
-            ).toList(),
+            ),
           ],
         ),
       ),

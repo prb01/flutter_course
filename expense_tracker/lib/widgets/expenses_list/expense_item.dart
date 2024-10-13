@@ -19,6 +19,9 @@ class ExpenseItem extends StatelessWidget {
           children: [
             Text(
               expense.title,
+              style: const TextStyle(
+                fontWeight: FontWeight.w800,
+              ),
             ),
             const SizedBox(
               height: 8,
